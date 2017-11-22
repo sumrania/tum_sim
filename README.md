@@ -1,5 +1,21 @@
 # Tumor Phylogeny Simulator
 
+## Tasks
+
+- [x] make github
+- [x] make GeneProf
+- [x] CNV duplication
+- [x] CNV inversion
+- [x] CNV deletion
+- [ ] Research and understand CTMMs
+- [ ] Find the probability/rate of future mutations based on past mutations
+- [ ] Tree generation where each node is a GeneProf
+- [ ] Tree Collapse (combine nodes) and make C
+- [ ] Generate U and mix U * C --> F
+- [ ] Add SNPs and methylation to GeneProf
+- [ ] VCF formatize
+
+
 ## Problem
 
 Tumors are naturally heterogeneous, meaning each individual tumor is comprised of many cell types each with theirown genetic and epigenetic profile.  When patients undergo cancer treatment, tumor samples can be taken and sub-sequently sequenced.  The most common sequencing technique is called bulk sequencing where the sequenced readscan align to any of the cell types from the original tumor.  A majority of clinics use bulk sequencing over single cellsequencing as single cell sequencing is more expensive and time consuming.
@@ -9,7 +25,7 @@ As a consequence, there exist many tools designed to \unmix" or \deconvolve" the
 ## Solution
 
 To  create  a  standardized  data  set  for  the  deconvolution  tools,  we  propose  creating  a  phylogenetic  simulator  that will use a continuous time markov model to determine when and which mutations occur next at each time.  When mutations occur, a branch in the phylogeny will be created bearing the same genetic profile as it's parent but nowcontaining  this  additional  mutation.   The  set  of  mutations  we  aim  to  create  will  be:
-1. SNP  transition
+1. SNP transition
 2. SNP transversion
 3. CNV amplification
 4. CNV deletion

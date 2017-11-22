@@ -7,13 +7,15 @@
 - [x] CNV duplication
 - [x] CNV inversion
 - [x] CNV deletion
-- [ ] Research and understand CTMMs
-- [ ] Find the probability/rate of future mutations based on past mutations
-- [ ] Tree generation where each node is a GeneProf
-- [ ] Tree Collapse (combine nodes) and make C
-- [ ] Generate U and mix U * C --> F
-- [ ] Add SNPs and methylation to GeneProf
-- [ ] VCF formatize
+- [ ] Research and understand CTMMs - all
+- [ ] Find the probability/rate of future mutations based on past mutations - shef
+- [ ] Tree generation where each node is a GeneProf - mooze
+- [ ] Tree Collapse (combine nodes) and make C - jesse, shef
+- [ ] Generate U and mix U * C --> F - anyone
+- [ ] Add SNPs and methylation to GeneProf - maybe no one
+- [ ] VCF formatize - maybe
+- [ ] Write report - all 
+- [ ] Make ppt - all
 
 
 ## Problem

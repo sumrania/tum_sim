@@ -7,15 +7,14 @@
 - [x] CNV duplication
 - [x] CNV inversion
 - [x] CNV deletion
-- [ ] Research and understand CTMMs - all
-- [ ] Find the probability/rate of future mutations based on past mutations - shef
-- [ ] Tree generation where each node is a GeneProf - mooze
-- [ ] Tree Collapse (combine nodes) and make C - jesse, shef
-- [ ] Generate U and mix U * C --> F - anyone
-- [ ] Add SNPs and methylation to GeneProf - maybe no one
-- [ ] VCF formatize - maybe
-- [ ] Write report - all 
-- [ ] Make ppt - all
+- [x] Research and understand CTMMs - all
+- [x] Find the probability/rate of future mutations based on past mutations - shef
+- [x] Tree generation where each node is a GeneProf - murtaza, jesse
+- [x] Tree Collapse (combine nodes) and make C - jesse, shef
+- [x] Generate U and mix U * C --> F - jesse, murtaza
+- [ ] VCF formatize - future work
+- [x] Write report - all 
+- [x] Make ppt - all
 
 
 ## Problem
@@ -27,12 +26,8 @@ As a consequence, there exist many tools designed to \unmix" or \deconvolve" the
 ## Solution
 
 To  create  a  standardized  data  set  for  the  deconvolution  tools,  we  propose  creating  a  phylogenetic  simulator  that will use a continuous time markov model to determine when and which mutations occur next at each time.  When mutations occur, a branch in the phylogeny will be created bearing the same genetic profile as it's parent but nowcontaining  this  additional  mutation.   The  set  of  mutations  we  aim  to  create  will  be:
-1. SNP transition
-2. SNP transversion
-3. CNV amplification
-4. CNV deletion
-5. Structural variant (SV) inversion
-6. SV translocation
-7. CpG methylation.  
+1. CNV inversion 
+2. CNV amplification
+3. CNV deletion
 
 Each node in the tree will keep track of the exact genetic profile of a cell type and the total numberof cells with that genetic profile.  We will then artificially "mix" these cells to produce mixed variant allele frequencies(VAFs) for SNPs, mixed copy number values for CNVs, mixed breakpoint copy numbers for SVs, and mixed variant allele frequencies for methylated CpGs.  Our final task will be to use this simulator to create a standardized data setwith many simulated samples binned into simulated "patients" to be used by the tools above.  We will adhere to thevariant calling format (VCF) as is standard for documenting variants.

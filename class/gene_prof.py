@@ -12,7 +12,6 @@ class GeneProf:
 	#                           example: ('1', 0) is maternal chromosome 1,     example: ('2', 1) is paternal chromosome 2
 	#                         val is ChrmProf object
 	#        mut_size_mean (float) mean size of a random mutation
-	#        mut_size_var (float) variance in size of random mutation
 	def __init__(self, chrm_dict, mut_size_mean):
 		self.mut_types = ['amp', 'rem', 'inv']
 		self.chrm_dict = chrm_dict
@@ -58,7 +57,7 @@ class GeneProf:
 		for chrm_str, pm in l:
 			_printnow('\n(' + str(chrm_str) + ', ' + str(pm) + ')\n')
 			self.chrm_dict[chrm_str, pm].pprint()
-		print 'copy_num_dict:', self.get_copy_nums_dict()
+		print '\ncopy_num_dict:', self.get_copy_nums_dict()
 
 	#
 	#   PRIVATE

@@ -1,22 +1,5 @@
 # Tumor Phylogeny Simulator
 
-## Tasks
-
-- [x] make github
-- [x] make GeneProf
-- [x] CNV duplication
-- [x] CNV inversion
-- [x] CNV deletion
-- [x] Research and understand CTMMs - all
-- [x] Find the probability/rate of future mutations based on past mutations - shef
-- [x] Tree generation where each node is a GeneProf - murtaza, jesse
-- [x] Tree Collapse (combine nodes) and make C - jesse, shef
-- [x] Generate U and mix U * C --> F - jesse, murtaza
-- [ ] VCF formatize - future work
-- [x] Write report - all 
-- [x] Make ppt - all
-
-
 ## Problem
 
 Tumors are naturally heterogeneous, meaning each individual tumor is comprised of many cell types each with theirown genetic and epigenetic profile.  When patients undergo cancer treatment, tumor samples can be taken and sub-sequently sequenced.  The most common sequencing technique is called bulk sequencing where the sequenced readscan align to any of the cell types from the original tumor.  A majority of clinics use bulk sequencing over single cellsequencing as single cell sequencing is more expensive and time consuming.
@@ -34,3 +17,20 @@ Each node in the tree will keep track of the exact genetic profile of a cell typ
 
 ## What did we do:
 We simulated 288 data sets generated using a variety of parameters influencing the complexity and progression of a tumor. All data can be found at https://cmu.box.com/s/thq5ba255f24av575ax5xhk9kvp2syve. The parameters that were used for constructing this data were: number of samples, number of mutations, mean mutation length, value choices for parameters for beta distributions, and choice in variance for generating a mixed sample. Along with these parameters, we also created a small data set labeled "toy" and larger data set labeled "real". The toy data set contains five chromosomes of lengths $10000, 15000, 20000, 25000, 30000$ while the real data set contains the 22 human chromosomes excluding X and Y chromosomes.
+
+
+## Tasks
+
+- [x] make github
+- [x] make GeneProf
+- [x] CNV duplication
+- [x] CNV inversion
+- [x] CNV deletion
+- [x] Research and understand CTMMs - all
+- [x] Find the probability/rate of future mutations based on past mutations - shef
+- [x] Tree generation where each node is a GeneProf - murtaza, jesse
+- [x] Tree Collapse (combine nodes) and make C - jesse, shef
+- [x] Generate U and mix U * C --> F - jesse, murtaza
+- [ ] VCF formatize - future work
+- [x] Write report - all 
+- [x] Make ppt - all

@@ -1,14 +1,19 @@
 # Tumor Phylogeny Simulator
 
+Create a phylogenetic simulator to generate artificial data sets generated using a variety of parameters influencing the complexity and progression of a tumor.
+
+* [Slides](slides.pdf)
+* [Report](report.pdf)
+
 ## Problem
 
 Tumors are naturally heterogeneous, meaning each individual tumor is comprised of many cell types each with theirown genetic and epigenetic profile.  When patients undergo cancer treatment, tumor samples can be taken and sub-sequently sequenced.  The most common sequencing technique is called bulk sequencing where the sequenced readscan align to any of the cell types from the original tumor.  A majority of clinics use bulk sequencing over single cellsequencing as single cell sequencing is more expensive and time consuming.
 
-As a consequence, there exist many tools designed to \unmix" or \deconvolve" these bulk sequences into theiroriginal cell types.  [6][5][1][2][9][3][4] Some of these approaches use single nucleotide polymorphisms (SNPs) [4], some use copy number variations (CNVs) [9], while others use both [6][5][1][3].  Each of these tools take their own custominput and output as well as simulating their own data making it difficult to adequately compare tools.  Previous attempts to create generalized simulators have not covered all possible mutation events and can therefore not be usedto generate a standardized test data set.  One simulator, PyVolve, uses a continuous time Markov model to build a tumor phylogeny with SNP mutations but fails to infer CNVs [8].  Another called Pomegranate infers SNPs and CNVs but does not maintain a genome so each CNV acts independently [7].  There is also no information produced on structural variants and methylation.
+As a consequence, there exist many tools designed to \unmix" or \deconvolve" these bulk sequences into their original cell types.  [6][5][1][2][9][3][4] Some of these approaches use single nucleotide polymorphisms (SNPs) [4], some use copy number variations (CNVs) [9], while others use both [6][5][1][3].  Each of these tools take their own custom input and output as well as simulating their own data making it difficult to adequately compare tools.  Previous attempts to create generalized simulators have not covered all possible mutation events and can therefore not be used to generate a standardized test data set.  One simulator, PyVolve, uses a continuous time Markov model to build a tumor phylogeny with SNP mutations but fails to infer CNVs [8].  Another called Pomegranate infers SNPs and CNVs but does not maintain a genome so each CNV acts independently [7].  There is also no information produced on structural variants and methylation.
 
 ## Solution
 
-To  create  a  standardized  data  set  for  the  deconvolution  tools,  we  propose  creating  a  phylogenetic  simulator  that will use a continuous time markov model to determine when and which mutations occur next at each time.  When mutations occur, a branch in the phylogeny will be created bearing the same genetic profile as it's parent but nowcontaining  this  additional  mutation.   The  set  of  mutations  we  aim  to  create  will  be:
+To  create  a  standardized  data  set  for  the  deconvolution  tools,  we  propose  creating  a  phylogenetic  simulator  that will use a continuous time markov model to determine when and which mutations occur next at each time.  When mutations occur, a branch in the phylogeny will be created bearing the same genetic profile as it's parent but now containing  this  additional  mutation.   The  set  of  mutations  we  aim  to  create  will  be:
 1. CNV inversion 
 2. CNV amplification
 3. CNV deletion
